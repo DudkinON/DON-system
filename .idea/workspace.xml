@@ -32,8 +32,8 @@
       <file leaf-file-name="Router.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/Router.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-289">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="340">
+              <caret line="56" column="81" lean-forward="true" selection-start-line="56" selection-start-column="81" selection-end-line="56" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -108,7 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/template/shop/header.php" />
         <option value="$PROJECT_DIR$/views/profile/index.php" />
         <option value="$PROJECT_DIR$/controllers/CatalogController.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
@@ -159,6 +158,7 @@
         <option value="$PROJECT_DIR$/template/default/header.php" />
         <option value="$PROJECT_DIR$/components/Router.php" />
         <option value="$PROJECT_DIR$/components/StartRouter.php" />
+        <option value="$PROJECT_DIR$/.gitignor" />
       </list>
     </option>
   </component>
@@ -214,74 +214,6 @@
             <path>
               <item name="CMS &quot;DON e-Commerce&quot;" type="b2602c69:ProjectViewProjectNode" />
               <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CMS &quot;DON e-Commerce&quot;" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CMS &quot;DON e-Commerce&quot;" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CMS &quot;DON e-Commerce&quot;" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CMS &quot;DON e-Commerce&quot;" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="loc" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CMS &quot;DON e-Commerce&quot;" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CMS &quot;DON e-Commerce&quot;" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CMS &quot;DON e-Commerce&quot;" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CMS &quot;DON e-Commerce&quot;" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CMS &quot;DON e-Commerce&quot;" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CMS &quot;DON e-Commerce&quot;" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CMS &quot;DON e-Commerce&quot;" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="install" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CMS &quot;DON e-Commerce&quot;" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="install" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -449,12 +381,12 @@
       <workItem from="1501369593346" duration="2482000" />
       <workItem from="1501373710030" duration="20527000" />
       <workItem from="1501401322907" duration="66783000" />
-      <workItem from="1501744322900" duration="18501000" />
+      <workItem from="1501744322900" duration="19273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="391084000" />
+    <option name="totallyTimeSpent" value="391856000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -467,8 +399,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15565032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15565032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -541,14 +474,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/Language.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/Blog.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -781,7 +706,7 @@
         <state relative-caret-position="51">
           <caret line="3" column="22484" lean-forward="false" selection-start-line="3" selection-start-column="22484" selection-end-line="3" selection-end-column="22484" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -930,10 +855,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignor">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/components/Router.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="56" column="81" lean-forward="true" selection-start-line="56" selection-start-column="81" selection-end-line="56" selection-end-column="81" />
           <folding />
         </state>
       </provider>
