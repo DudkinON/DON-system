@@ -6,7 +6,7 @@
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
                             <li><a href="#"><i class="fa fa-phone"></i> +1 000 000 00 00</a></li>
-                            <li><a href="mailto:info@elleada.pw"><i class="fa fa-envelope"></i> info@elleada.pw</a></li>
+                            <li><a href="../../index.php"><i class="fa fa-envelope"></i> info@elleada.pw</a></li>
                         </ul>
                     </div>
                 </div>

@@ -10,23 +10,16 @@
 /******| Starting session |********/
 session_start();
 
-/*****| include system file |******/
+/*****| include system files |******/
 require(dirname(__FILE__) . '/config.php');
 
-require(ROOT . COMP . '/Autoload.php');
-//require (ROOT.'/config/titles.php');
-if (Functions::checkConfig(SETTINGS_FILE)) {
-    require(ROOT . '/' . SETTINGS_FILE);
+require(ROOT . DON . COMP . '/Autoload.php');
 
-    /********| Create Router |*********/
-    $router = new Router();
+if (file_exists(ROOT . '/' . SETTINGS_FILE)) require(ROOT . '/' . SETTINGS_FILE);
 
-    /*******| Starting Router |********/
-    $router->start();
-} else {
-    /********| Create Router installer |*********/
-    $installer = new StartRouter();
-    /*******| Run Router installer |********/
-    $installer->run();
-}
+/********| Create Router |*********/
+$router = new Router();
+
+/*******| Starting Router |********/
+$router->start();
 

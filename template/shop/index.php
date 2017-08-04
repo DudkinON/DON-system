@@ -1,10 +1,10 @@
 
-<?php require_once (ROOT.'/template/'.TEMPLATE.'/header.php');?>
+<?php require_once(ROOT . '/template/' . TEMPLATE . '/header.php');?>
 <section>
     <div class="container">
         <div class="row">
 
-            <?php require_once (ROOT.'/template/'.TEMPLATE.'/sidebar.php');?>
+            <?php require_once(ROOT . '/template/' . TEMPLATE . '/sidebar.php');?>
 
                     <div class="col-sm-9 padding-right">
                         <div class="features_items"><!--features_items-->
@@ -77,4 +77,4 @@
             </div>
         </section>
 
-<?php require_once (ROOT.'/template/'.TEMPLATE.'/footer.php'); ?>
+<?php require_once(ROOT . '/template/' . TEMPLATE . '/footer.php'); ?>

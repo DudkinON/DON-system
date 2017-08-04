@@ -13,15 +13,18 @@ class Router
     private $routers;
 
     /**********| Create construct routers |***********/
-    protected $path = '/config/routers.php';
-    public function __construct(){
-        $this->routers = require_once(ROOT.$this->path);
+
+    private $app_name;
+    private function getApp() {
+        return $this->app_name;
     }
 
-    /*
-     * @function: request string
-     * @return URI
-     * @type string
+    public function __construct(){
+        $this->routers = require_once(ROOT.ROUTES_PATH);
+    }
+
+    /**
+     * @return bool|string
      */
     public function getURI(){
         #Returns request string

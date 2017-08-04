@@ -9,7 +9,7 @@ return array
 (
     # TODO: routes configuration
     # Main page route
-    '^$' => 'site/index',
+    '^/*$' => 'don/site/index',
     # Product routes:
     '^product/([0-9]+)' => 'product/view/$1',
     # language
