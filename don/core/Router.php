@@ -56,15 +56,8 @@ class Router
 
                 if (is_int($pattern) && is_array($method))
                 {
-//                    echo '<pre>';
-//                    print_r($urls);
-//                    print_r($pattern);
-//                    print_r($method);
-
                     if (preg_match((@convert_url($method['route'])), $this->uri, $matches)) {
                         $url = convert_url($method['route']);
-//                        echo '<pre>';
-//                        print_r($url);
                         $this->app = array($_app, array('route' => $url, 'action' => $method['action'], 'name' => $method['name'], 'args' => $matches));
                         break(2);
                     }

@@ -21,9 +21,14 @@ return array(
     'views' => '/views.php',
     // cache enable
     'cache' => false,
+    // twig extensions
+    'twig_ext' => '.html.twig',
+    // localization
+    'localization' => true,
 
     // define works apps
     'apps' => [
+//        'your_app', # add your app here
         'main',
         'news',
     ],

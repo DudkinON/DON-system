@@ -13,4 +13,21 @@ namespace don\core;
 class BaseModel
 {
 
+    protected function register_table()
+    {
+
+        self::iterateVisible();
+    }
+
+    function iterateVisible() {
+        echo "MyClass::iterateVisible:\n";
+        foreach ($this as $key => $value)
+        {
+            print "$key => $value\n";
+        }
+    }
+
 }
+
+//$class = new Model();
+//$class->iterateVisible();

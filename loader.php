@@ -17,6 +17,7 @@ require (DON_DIR.'/core/BaseModel.php');
 require (DON_DIR.'/core/BaseForms.php');
 require (DON_DIR.'/core/BaseView.php');
 require (DON_DIR.'/core/BaseController.php');
+require (DON_DIR.'/core/BaseLocalisation.php');
 
 // require modules
 if(file_exists(DON_DIR.'/modules/composer/vendor/autoload.php')) {
