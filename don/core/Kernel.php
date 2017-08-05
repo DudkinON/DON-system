@@ -12,5 +12,7 @@ namespace don\core;
 
 interface Kernel
 {
-
+    public function __construct($settings);
+    public function active_app_define();
+    public function get_app();
 }

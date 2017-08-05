@@ -9,12 +9,13 @@
 
 namespace don\core;
 
-class Router
+class Router implements Kernel
 {
-    private $settings, $uri, $app, $app_controller;
+    private $settings, $uri, $app, $app_controller, $language = array();
+
 
     /**
-     * Router constructor.
+     * TODO: Router constructor.
      * @param $settings
      */
     public function __construct($settings)
@@ -54,8 +55,7 @@ class Router
             foreach ($urls as $pattern => $method) {
                 $matches = array();
 
-                if (is_int($pattern) && is_array($method))
-                {
+                if (is_int($pattern) && is_array($method)) {
                     if (preg_match((@convert_url($method['route'])), $this->uri, $matches)) {
                         $url = convert_url($method['route']);
                         $this->app = array($_app, array('route' => $url, 'action' => $method['action'], 'name' => $method['name'], 'args' => $matches));
@@ -69,51 +69,47 @@ class Router
                 }
             }
         }
-if ($this->app === false)
-{
-exit('App not found');
-}
-}
-
-/**
- * TODO: define path to controller and require it
- */
-private
-function getController()
-{
-    $this->app_controller = BASE_DIR . '/apps/' . $this->app[0] . $this->settings['controller'];
-    if (file_exists($this->app_controller)) {
-        require($this->app_controller);
-        $controller_name = $this->app[0] . 'Controller';
-        $this->app_controller = new $controller_name();
-    }
-}
-
-/**
- * TODO: Run method in app
- */
-protected
-function run()
-{
-    if ($this->app || is_array($this->app))
-    {
-        if (is_array($this->app[1]['action'])) {
-            $this->getController();
-            render($this->app[1]['action']['view'], $this->app[1]['action']['args']);
-        } else {
-            $this->getController();
-            $this->app_controller->{$this->app[1]['action']}($this->app[1]['args'], $this->getSettings(), $this->get_app());
+        if ($this->app === false) {
+            exit('App not found');
         }
     }
-}
 
-/**
- * TODO: get settings
- * @return array()
- */
-public
-function getSettings()
-{
-    return $this->settings;
-}
+    /**
+     * TODO: define path to controller and require it
+     */
+    private function getController()
+    {
+        $this->app_controller = BASE_DIR . '/apps/' . $this->app[0] . $this->settings['controller'];
+        if (file_exists($this->app_controller)) {
+            require($this->app_controller);
+            $controller_name = $this->app[0] . 'Controller';
+            $this->app_controller = new $controller_name();
+        }
+    }
+
+    /**
+     * TODO: Run method in app
+     */
+    protected function run()
+    {
+        if ($this->app || is_array($this->app)) {
+            if (is_array($this->app[1]['action'])) {
+                $this->getController();
+                render($this->app[1]['action']['view'], $this->app[1]['action']['args']);
+            } else {
+                $this->getController();
+                if ($this->settings['localization']) $this->language = Localisation::get_language();
+                $this->app_controller->{$this->app[1]['action']}($this->app[1]['args'], $this->language, $this->getSettings());
+            }
+        }
+    }
+
+    /**
+     * TODO: get settings
+     * @return array()
+     */
+    public function getSettings()
+    {
+        return $this->settings;
+    }
 }

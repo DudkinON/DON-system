@@ -28,7 +28,7 @@ return array(
 
     // define works apps
     'apps' => [
-//        'your_app', # add your app here
+    //    'your_app', # add your app here
         'main',
         'news',
     ],

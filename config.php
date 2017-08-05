@@ -12,6 +12,8 @@
 // TODO: define constants
 define('BASE_DIR', getcwd());
 define('DON_DIR', BASE_DIR.'/don');
+define('COMPONENTS', BASE_DIR.'/don/components');
+define('CORE', __DIR__.'/don/core');
 define('TWIG_CACHE_DIR', BASE_DIR.'/don/cache');
 define('APPS_DIR', BASE_DIR.'/apps');
 define('TEMPLATES_DIR', BASE_DIR.'/templates');

@@ -10,20 +10,24 @@
 namespace don\core;
 
 
-abstract class BaseLocalisation
+class BaseLocalisation implements Language
 {
+
     /**
+     * return dictionary of words
+     * @param $get_lang_path
+     * @param $get_default_language
      * @return array|mixed
      */
-    public static function getLanguage()
+    protected static function language($get_lang_path, $get_default_language)
     {
         $language = array();
         if (isset($_SESSION['language'])) {
-            $path = BASE_DIR . '/loc/' . $_SESSION['language'] . '.php';
+            $path = $get_lang_path;
             if (file_exists($path)) {
                 $language = include($path);
             } else {
-                $language = include(BASE_DIR . '/loc/en.php');
+                $language = include(BASE_DIR .  $get_default_language);
             }
         } else {
             $browser_lang = !empty($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? strtok(strip_tags($_SERVER['HTTP_ACCEPT_LANGUAGE']), ',') : '';
@@ -39,7 +43,8 @@ abstract class BaseLocalisation
         return $language;
     }
 
-    public static function getUserLanguage($lang = false){
+
+    public static function get_user_language($lang = false){
         if (isset($_SESSION['user'])){
             self::updateUserLanguage($_SESSION['user'], $lang);
             $db = Db::getConnection();
@@ -55,7 +60,7 @@ abstract class BaseLocalisation
         }
     }
 
-    public static function updateUserLanguage($uid, $lang){
+    public static function update_user_language($uid, $lang){
         $db = Db::getConnection();
         $sql = 'UPDATE `user` '.'SET `language` = :language WHERE `id` = :id';
         $result = $db->prepare($sql);

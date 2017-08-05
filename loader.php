@@ -7,17 +7,10 @@
  * Time: 12:08 PM
  */
 
+session_start();
+
 // require configuration file
 require (dirname(__FILE__).'/config.php');
-
-
-// require base classes
-require (DON_DIR.'/core/Base.php');
-require (DON_DIR.'/core/BaseModel.php');
-require (DON_DIR.'/core/BaseForms.php');
-require (DON_DIR.'/core/BaseView.php');
-require (DON_DIR.'/core/BaseController.php');
-require (DON_DIR.'/core/BaseLocalisation.php');
 
 // require modules
 if(file_exists(DON_DIR.'/modules/composer/vendor/autoload.php')) {
@@ -30,5 +23,16 @@ foreach ($modules as $module) {
     require ($module);
 }
 
-// require router
-require (DON_DIR.'/core/Router.php');
+//dump(CORE, true);
+// require autoload
+require (COMPONENTS . '/autoload.php');
+
+//// require base classes
+//require (DON_DIR.'/core/Base.php');
+//require (DON_DIR.'/core/BaseModel.php');
+//require (DON_DIR.'/core/BaseForms.php');
+//require (DON_DIR.'/core/BaseView.php');
+//require (DON_DIR.'/core/BaseController.php');
+//require (DON_DIR.'/core/BaseLocalisation.php');
+//require (DON_DIR.'/core/Kernel.php');
+//require (DON_DIR.'/core/Router.php');

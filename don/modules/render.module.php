@@ -19,16 +19,13 @@ function render($view, $args = array())
     $loader = new Twig_Loader_Filesystem(TEMPLATES_DIR);
     $loader->addPath(TEMPLATES_DIR . '/' . ACTIVE_APP);
     $cache_dir = false;
-    $language = array();
-    if ($settings['localization']) $language = \don\core\BaseLocalisation::getLanguage();
     if ($settings['cache']) $cache_dir = TWIG_CACHE_DIR;
     if ($settings['twig_ext']) $ext = $settings['twig_ext'];
     else $ext = '.html';
     $twig = new Twig_Environment($loader, array('cache' => $cache_dir,));
     require (MODULES.'/twig.url.php');
-    $extension_class_name = '\\Twig_Extensions\\' . 'Urls_Twig_Extension';
+    $extension_class_name = '\\don\core\\' . 'UrlsTwigExtension';
     $twig->addExtension(new $extension_class_name());
-    $args = array_merge(array('language' => $language));
     $template = $twig->load($view . $ext);
 
     $template->display($args);

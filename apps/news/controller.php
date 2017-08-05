@@ -13,12 +13,16 @@ use don\core\BaseController;
 
 class NewsController extends BaseController
 {
-    public function news($args, $settings) {
-        render('index', $settings);
+    public function news($args, $language) {
+        render('index', $language);
     }
 
-    public function page($args) {
-        render('one_news', array('id' => $args[1]));
+    public function page($args, $language) {
+        $context = array(
+            'id' => $args[1],
+            'language' => $language
+            );
+        render('one_news', $context);
     }
 }
 
