@@ -30,6 +30,6 @@ return array(
     'apps' => [
     //    'your_app', # add your app here
         'main',
-        'news',
+        'admin',
     ],
 );

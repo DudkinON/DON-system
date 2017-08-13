@@ -50,6 +50,11 @@ class Router implements Kernel
      */
     protected function define_path()
     {
+        if (preg_match("~/lang/[a-z]+~", $this->uri))
+        {
+            $lang = explode('/', trim($this->uri, '/'))[1];
+            Localisation::getLang($lang);
+        }
         foreach ($this->settings['apps'] as $_app) {
             $urls = require(APPS_DIR . '/' . $_app . $this->settings['routes']);
             foreach ($urls as $pattern => $method) {
@@ -70,7 +75,8 @@ class Router implements Kernel
             }
         }
         if ($this->app === false) {
-            exit('App not found');
+            header("HTTP/1.0 404 Not Found");
+            exit();
         }
     }
 
@@ -98,8 +104,15 @@ class Router implements Kernel
                 render($this->app[1]['action']['view'], $this->app[1]['action']['args']);
             } else {
                 $this->getController();
-                if ($this->settings['localization']) $this->language = Localisation::get_language();
-                $this->app_controller->{$this->app[1]['action']}($this->app[1]['args'], $this->language, $this->getSettings());
+                if (ACTIVE_APP === 'admin') {
+                    $this->language = LocalisationAdmin::get_language();
+                    $this->app_controller->{$this->app[1]['action']}($this->app[1]['args'], $this->language, $this->getSettings());
+                }
+                else
+                {
+                    if ($this->settings['localization']) $this->language = Localisation::get_language();
+                    $this->app_controller->{$this->app[1]['action']}($this->app[1]['args'], $this->language, $this->getSettings());
+                }
             }
         }
     }

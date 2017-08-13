@@ -23,7 +23,6 @@ function render($view, $args = array())
     if ($settings['twig_ext']) $ext = $settings['twig_ext'];
     else $ext = '.html';
     $twig = new Twig_Environment($loader, array('cache' => $cache_dir,));
-    require (MODULES.'/twig.url.php');
     $extension_class_name = '\\don\core\\' . 'UrlsTwigExtension';
     $twig->addExtension(new $extension_class_name());
     $template = $twig->load($view . $ext);
@@ -43,12 +42,34 @@ function render_url($view, $args = array())
 }
 
 /**
- * render page
+ * render a page
  * @param $page
  */
 function render_page($page)
 {
     render($page[1]);
+}
+
+/**
+ * return path to the app template
+ * @param $template_name
+ * @param string $ext
+ * @return string
+ */
+function template($template_name, $ext = '.php')
+{
+    return (BASE_DIR . '/templates/' . ACTIVE_APP . '/' . $template_name . $ext);
+}
+
+/**
+ * return path to the template
+ * @param $template_name
+ * @param string $ext
+ * @return string
+ */
+function template_part($template_name, $ext = '.php')
+{
+    return (TEMPLATES_DIR . '/' . $template_name . $ext);
 }
 
 /**
@@ -59,8 +80,8 @@ function render_page($page)
 function dump($var, $exit = false)
 {
     echo '<pre>';
-    print_r($var);
-    echo '</pre>';
+    var_dump($var);
+    echo '</pre>';;
 
     if ($exit) exit();
 }

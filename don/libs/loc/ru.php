@@ -8,11 +8,11 @@
  */
 # TODO: Return language array
 return array(
-    #language
+    # language
     'lang' => 'ru',
     'en' => 'english',
     'ru' => 'русский',
-    #main
+    # main
     'sign_in' => 'войти',
     'sign_up' => 'зарегистрироваться',
     'language' => 'язык',
@@ -22,8 +22,29 @@ return array(
     'send' => 'отправить',
     'add' => 'добавить',
     'save' => 'сохранить',
-    #phrases
-    'this_simple_phrase' => 'Это простая фраза',
-    #errors
+    'but' => 'но',
+    'continue' => 'продолжить',
+    'confirm' => 'подтвердить',
+    # database
+    'db_configure' => 'конфигурация базы данных',
+    'host' => 'host базы данных',
+    'db_name' => 'имя базы данных',
+    'db_user' => 'имя пользователя базы данных',
+    'db_password' => 'пароль базы данных',
+    # superuser
+    'super_user_name' => 'имя суперпользователя',
+    'super_user_password' => 'пароль суперпользователя',
+    's_u_password_confirm' => 'подтвердить пароль суперпользователя',
+    # phrases
+    'don_copyright' => 'Авторское право - DON system',
+    'don_admin_panel' => 'DON - admin panel',
+    'congratulate_you' => 'Поздравляем вас',
+    'licence_agree' => 'нажимая кнопку начать Вы принимаете условия',
+    'licence_agreement' => 'лицензионного соглашения',
+    'successfully_installed' => 'Вы успешно установили DON - System',
+    'configuration_db_false' => 'конфигурация базы данных не найдена',
+    'lets_started' => 'Давайте начнем',
+    'get_started' => 'начать',
+    # errors
     'error_create_folder' => 'Ошибка создания папки.',
 );

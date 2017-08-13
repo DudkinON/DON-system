@@ -20,6 +20,7 @@ class BaseModel
     }
 
     function iterateVisible() {
+
         echo "MyClass::iterateVisible:\n";
         foreach ($this as $key => $value)
         {
@@ -27,7 +28,39 @@ class BaseModel
         }
     }
 
-}
+    function return_model()
+    {
+        $arr = array();
+        foreach ($this as $key => $value)
+        {
+            if (is_array($value))
+            {
+                $arr[$key] = json_encode($value);
+            }
+            else
+            {
+                $arr[$key] = json_decode($value, true);
+            }
+        }
+        return $arr;
+    }
 
-//$class = new Model();
-//$class->iterateVisible();
+//    protected static function char_field($data = false)
+//    {
+//        if ($data)
+//        {
+//            $data = json_decode($data);
+//            $set = array();
+//            foreach ($data as $key => $value)
+//            {
+//                $set[] = "'{$key}' => '{$value}'";
+//            }
+//            return $set;
+//        }
+//        else
+//        {
+//           return false;
+//        }
+//
+//    }
+}

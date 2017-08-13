@@ -12,8 +12,35 @@ namespace don\core;
 
 class Base
 {
-//    protected function getSettings() {
-//        return $this->getSettings();
-//    }
+    /**
+     * check database configuration
+     * @return bool
+     */
+    protected function checkConfiguration()
+    {
+        if (!file_exists(BASE_DIR . '/db.php')) return true;
+        else return false;
+    }
 
+    /**
+     * redirect to admin panel
+     * @return void
+     */
+    protected function redirectAdmin()
+    {
+        header("Location: /don");
+        return;
+    }
+
+    protected function validateForm($form)
+    {
+        $validForm = false;
+        foreach ($form as $name => $value)
+        {
+            $value = preg_replace("/[[:cntrl:]]+/", '', $value);
+            $validForm[] = trim(htmlspecialchars($value));
+        }
+        if ($validForm) return $validForm;
+        else return false;
+    }
 }

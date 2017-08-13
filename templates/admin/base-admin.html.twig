@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ language['lang'] }}">
+<head>
+    {% include 'head-admin.html.twig' %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+{% include 'header-admin.html.twig' %}
+{% block content %}{% endblock %}
+{% include 'footer-admin.html.twig' %}
+{% include 'scripts-admin.html.twig' %}
+</body>
+</html>

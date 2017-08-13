@@ -1,0 +1,131 @@
+body {
+    color: #bbb;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #666;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+a, button {
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.base-color {
+    color: #00c9ff;
+}
+
+.btn-don {
+    color: #fff;
+    background-color: #00c9ff;
+    border-color: #19b3cb;
+}
+
+.btn-don:hover {
+    color: #fff;
+    background-color: #00abd9;
+    border-color: #169bb1;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.logo-get-started {
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.logo-don {
+    color: #00c9ff;
+}
+
+.logo-text {
+    color: #1d1e1f;
+}
+
+.logo-pad {
+    padding: 20px 0;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+#get-started {
+    cursor: pointer;
+}
+
+.font-w-100 {
+    font-weight: 100;
+}
+
+::-webkit-input-placeholder {
+    color: #ccc !important;
+}
+
+:-moz-placeholder {
+    color: #ccc !important;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    color: #ccc !important;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #ccc !important;
+}
+
+[type="search"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+}
+
+.form-margin {
+    margin: 10px 0;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.lang-container {
+    display: inherit;
+    position: relative;
+}
+
+.lang-btn {
+
+}
+
+.lang-selection {
+    display: none;
+    position: absolute;
+}
+
+.lang-item {
+    display: inline-block;
+}
+
+.lang-item > a {
+    text-decoration: none;
+}
+
+.admin-content {
+    min-height: 700px;
+}
+
+#form-config-db {
+    display: none;
+}
+
+#finish-conf {
+    display: none;
+}
+

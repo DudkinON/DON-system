@@ -1,0 +1,55 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block title %}{{ language['don_admin_panel'] }}{% endblock %}
+
+
+{% block content %}
+<section class="admin-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-lg-3">
+                {% include 'sidebar.html.twig' %}
+            </div>
+            <div class="col-md-6 col-lg-6">
+                {% if start %}
+                    <div class="text-center pt-20" id="start">
+                        <h1>{{ language['congratulate_you'] }}!</h1>
+                        <hr>
+                        <p class="pt-20">{{ language['successfully_installed'] }}</p>
+                        <p>{{ language['but'] }} {{ language['configuration_db_false'] }}</p>
+                        <p>{{ language['licence_agree'] }} <a href="#" target="_blank">{{ language['licence_agreement'] }}</a></p>
+                        <p>{{ language['lets_started'] }}?</p>
+                        <hr>
+                        <div class="btn btn-don text-uppercase pointer" id="get-started">{{ language['get_started'] }}</div>
+                    </div>
+                    <div class="text-justify"></div>
+                    <div class="text-center pt-20" id="form-config-db">
+                        <h1>{{ language['db_configure'] }}!</h1>
+                        <hr class="mt-5">
+                        <div class="pt-20">
+                            <form action="" method="post" class="form-base">
+                                <div id="db-form">
+                                    <input name="host" class="form-control form-margin" placeholder="{{ language['host'] }}" value="{{ host }}">
+                                    <input name="db_name" class="form-control form-margin" placeholder="{{ language['db_name'] }}">
+                                    <input name="db_user" class="form-control form-margin" placeholder="{{ language['db_user'] }}">
+                                    <input type="password" name="db_password form-margin" class="form-control" placeholder="{{ language['db_password'] }}">
+                                    <div class="btn btn-don text-uppercase pointer form-margin" id="conf-continue">{{ language['continue'] }}</div>
+                                </div>
+                                <div id="finish-conf">
+                                    <input name="super_user_name" class="form-control form-margin" placeholder="{{ language['super_user_name'] }}">
+                                    <input name="super_user_password" class="form-control form-margin" type="password" placeholder="{{ language['super_user_password'] }}">
+                                    <input name="s_u_password_confirm" class="form-control form-margin" type="password" placeholder="{{ language['s_u_password_confirm'] }}">
+                                    <button name="db_conf" class="btn btn-don text-uppercase pointer form-margin">{{ language['continue'] }}</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                {% else %}
+                    {{ content }}
+                {% endif %}
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+    </div>
+</section>
+{% endblock %}

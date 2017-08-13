@@ -11,13 +11,14 @@ use don\core\BaseModel;
  */
 
 
-class Models extends BaseModel
+class IndexModel extends BaseModel
 {
-    public $var1 = 'value 1';
-    public $var2 = 'value 2';
-    public $var3 = 'value 3';
 
-    protected $protected = 'protected var';
-    private   $private   = 'private var';
+    public $name = '{"char_field":{"max_length":30,"blank":true,"null":true,"default":false}}';
+//    public $title = char_field('{"max_length":30,"blank":true,"null":true,"default":false}');
+    public $is_active = '{"bool_field":true}';
+    public $created = '{"date_time_field":{"auto_now_add":true,"auto_now":false}}';
+    public $updated = '{"date_time_field":{"auto_now_add":true,"auto_now":false}}';
+
 }
 

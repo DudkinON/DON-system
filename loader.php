@@ -6,8 +6,9 @@
  * Date: 8/3/2017
  * Time: 12:08 PM
  */
+session_start(['csrf_rewrite'=>SESSION_CSRF_POST, 'csrf_validate'=>SESSION_CSRF_POST]);
 
-session_start();
+
 
 // require configuration file
 require (dirname(__FILE__).'/config.php');

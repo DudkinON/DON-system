@@ -30,9 +30,6 @@ class BaseLocalisation implements Language
                 $language = include(BASE_DIR .  $get_default_language);
             }
         } else {
-            $browser_lang = !empty($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? strtok(strip_tags($_SERVER['HTTP_ACCEPT_LANGUAGE']), ',') : '';
-            if ($browser_lang) $_SESSION['language'] = substr($browser_lang, 0, 2);
-            else  $_SESSION['language'] = 'en';
             $path = BASE_DIR . '/loc/' . $_SESSION['language'] . '.php';
             if (file_exists($path)) {
                 $language = include($path);

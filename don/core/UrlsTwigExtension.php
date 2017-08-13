@@ -41,7 +41,6 @@ class UrlsTwigExtension extends \Twig_Extension
             }
         }
 
-
         // return link
         if (isset($_url)) {
             foreach ($_url as $u) {
@@ -50,7 +49,6 @@ class UrlsTwigExtension extends \Twig_Extension
         }
 
         return false;
-
     }
 
     public function getName()

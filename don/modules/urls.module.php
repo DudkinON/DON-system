@@ -9,15 +9,15 @@
 
 /**
  * @param $route
- * @param $view
+ * @param $action
  * @param $name
  * @return array
  */
-function url($route, $view, $name)
+function url($route, $action, $name)
 {
     return array(
         'route' => $route,
-        'action' => $view,
+        'action' => $action,
         'name' => $name
     );
 }
