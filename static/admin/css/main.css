@@ -15,6 +15,15 @@ a, button {
     min-height: 40px;
 }
 
+a {
+    text-decoration: none!important;
+    color: #00c9ff;
+}
+
+a:hover {
+    color: #00a8d6;
+}
+
 .base-color {
     color: #00c9ff;
 }
@@ -113,9 +122,6 @@ a, button {
     display: inline-block;
 }
 
-.lang-item > a {
-    text-decoration: none;
-}
 
 .admin-content {
     min-height: 700px;
