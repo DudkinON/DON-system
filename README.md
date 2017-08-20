@@ -1,11 +1,11 @@
-#DON system 
+# DON system 
 DON system is a micro-framework used for PHP development
-#Installation
+## Installation
 in Windows, install [Git](https://git-scm.com/downloads), 
 run Git Bash, and type the following shell command: 
 
 ```
-git clone 
+git clone "https://github.com/DudkinON/DON-system/"
 ```
 
 in Linux, install [Git](https://git-scm.com/downloads)
@@ -13,10 +13,10 @@ in Linux, install [Git](https://git-scm.com/downloads)
 Type the following shell command:
 
 ```
-git clone
+git clone "https://github.com/DudkinON/DON-system/"
 ```
 
-#Usage
+## Usage
 To create your application:
 1. Create folder with same name as your_app_name
 2. In this folder, create two files - routes.php and controller.php
