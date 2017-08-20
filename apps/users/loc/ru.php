@@ -24,10 +24,12 @@ return array(
     'home' => 'главная',
     'send' => 'отправить',
     'add' => 'добавить',
+    'or' => 'или',
     'save' => 'сохранить',
     'but' => 'но',
     'continue' => 'продолжить',
     'confirm' => 'подтвердить',
+    'errors' => 'ошибки',
     # database
     'db_configure' => 'Конфигурация базы данных',
     'host' => 'host базы данных',
@@ -54,7 +56,10 @@ return array(
     # errors
     'error_create_folder' => 'Ошибка создания папки',
     'error_create_file' => 'Ошибка создания файла',
+    'error_create_table' => 'Ошибка создание таблицы:',
     'error_connect_db' => 'Не удалось подключиться к базе данных',
     'error_passwords_not_match' => 'Пароли не совпадают',
     'error_controller_not_found' => 'контроллер не найден',
+    'error_invalid_email' => 'недопустимый формат электронной почты',
+    'error_email_not_registered' => 'этот адрес электронной почты не зарегистрирован',
 );

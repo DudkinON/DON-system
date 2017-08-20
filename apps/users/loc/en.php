@@ -24,10 +24,12 @@ return array(
     'home' => 'Home',
     'send' => 'send',
     'add' => 'add',
+    'or' => 'or',
     'save' => 'save',
     'but' => 'but',
     'continue' => 'continue',
     'confirm' => 'confirm',
+    'errors' => 'errors',
     # database
     'db_configure' => 'Database Configuration',
     'host' => 'database host',
@@ -54,7 +56,10 @@ return array(
     # errors
     'error_create_folder' => 'Error create the folder',
     'error_create_file' => 'Error create the file',
+    'error_create_table' => 'Error create table: the ',
     'error_connect_db' => 'Could not connect to the database',
     'error_passwords_not_match' => 'Passwords do not match',
     'error_controller_not_found' => 'controller not found',
+    'error_invalid_email' => 'email is invalid format',
+    'error_email_not_registered' => 'this email address is not registered',
 );

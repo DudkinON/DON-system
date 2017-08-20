@@ -17,6 +17,7 @@ Options +ExecCGI +FollowSymLinks
 
 AddDefaultCharset utf-8
 
+ErrorDocument 404 /404.html
 
 RewriteEngine On
 RewriteBase /

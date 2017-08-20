@@ -8,6 +8,6 @@
  */
 
 return array(
-    url('/don', 'don', 'don'),
-    url('/don/start', 'start', 'start'),
+    url('/user/login', 'login', 'login'),
+    url('/user/register', 'register', 'register'),
 );

@@ -11,15 +11,32 @@ namespace don\core;
 
 
 
+use PDO;
+
 class Database
 {
     /**
-     * TODO: If database exist return version string else false
+     * TODO: if database exist return version string else false
      * @return bool
      */
     public static function isMySQLdb()
     {
         if (mysqli_get_client_info()) return true;
         else return false;
+    }
+
+    /**
+     * TODO: return user by email
+     * @param $email
+     * @return mixed
+     */
+    public static function getUserByEmail($email)
+    {
+        $db = Db::getConnection();
+        $sql = 'SELECT * '.'FROM `users` WHERE email = :email';
+        $result = $db->prepare($sql);
+        $result->bindParam(':email', $email, PDO::PARAM_STR);
+        $result->execute();
+        return $result->fetch(ARRAY_FILTER_USE_KEY);
     }
 }

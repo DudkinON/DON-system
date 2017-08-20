@@ -7,6 +7,9 @@
  * Date: 11/5/2016
  * Time: 8:51 AM
  */
+
+namespace don\core;
+
 class Functions
 {
 
@@ -44,28 +47,6 @@ class Functions
         if (($number == (int)$number || $number == (float)$number) && strlen($number) > $length) return true;
         return false;
     }
-
-//    public static function titlePage()
-//    {
-//        $title = '';
-//        $S = $_SERVER['REQUEST_URI'];
-//        if ($S == '/catalog/') $title = 'Catalog';
-//        elseif ($S == '/cart/') $title = 'Cart';
-//        elseif ($S == '/cart/checkout/') $title = 'Checkout - Cart';
-//        elseif ($S == '/user/registration/') $title = 'Registration';
-//        elseif ($S == '/user/login/') $title = 'Login';
-//        elseif ($S == '/profile/edit/') $title = 'Edit - Profile';
-//        elseif ($S == '/profile/') $title = 'Profile';
-//        elseif ($S == '/blog/') $title = 'Blog';
-//        elseif ($S == '/about/') $title = 'About US';
-//        elseif ($S == '/contacts/') $title = 'Contacts - text us';
-//        elseif ($S == '/admin/') $title = 'Admin Panel';
-//        elseif ($S == '/') $title = 'Home';
-//        elseif ($S == '/category/([0-9]+)/') $title = 'Catalog';
-//        elseif ($S == '/category/([0-9]+)/page-([0-9]+)/') $title = 'Catalog';
-//        else $title = SITENAME;
-//        return $title;
-//    }
 
     /**
      * TODO: Cut first six characters of string and return without the deleted characters
@@ -138,11 +119,11 @@ class Functions
             $name = md5(microtime() . rand(0, 9999));
             $path = self::getPath($name);
             $fileName = self::getFileName($name);
-            $file = ROOT . $path . $fileName . $type;
+            $file = BASE_DIR . $path . $fileName . $type;
         } while (file_exists($file));
         $uniqueName['unique_name'] = $name;
         $uniqueName['path'] = $path;
-        $uniqueName['full_path'] = ROOT . $path;
+        $uniqueName['full_path'] = BASE_DIR . $path;
         $uniqueName['file_name'] = $fileName;
         $uniqueName['file_name_type'] = $fileName . $type;
         $uniqueName['root_path_file_type'] = $file;
@@ -161,19 +142,6 @@ class Functions
     {
         $length = strlen($title);
         if ($length >= $min && $length <= $max) return true;
-        else return false;
-    }
-
-    /**
-     * TODO: Validate file existence
-     * @param $file_name
-     * @return bool
-     */
-    public static function checkConfig($file_name)
-    {
-        $filename = ROOT . '/' . $file_name;
-
-        if (file_exists($filename)) return true;
         else return false;
     }
 
@@ -256,25 +224,12 @@ class Functions
     }
 
     /**
-     * TODO: Validate length of password more than 8 characters
-     * @param $password
-     * @return bool
-     */
-    public static function checkPassword($password)
-    {
-        if (strlen($password) > 7) {
-            return true;
-        }
-        return false;
-    }
-
-    /**
      * TODO: Validate passwords - are equal
      * @param $password
      * @param $confirm_password
      * @return bool
      */
-    public static function checkConfirmPassword($password, $confirm_password)
+    public static function checkMatchPassword($password, $confirm_password)
     {
         if ($confirm_password === $password) {
             return true;
@@ -282,4 +237,13 @@ class Functions
         return false;
     }
 
+    /**
+     * TODO: Redirect user to $path
+     * @param $path
+     */
+    public static function redirect($path)
+    {
+        header("Location: $path");
+        exit();
+    }
 }

@@ -20,8 +20,8 @@ class Localisation extends BaseLocalisation
             if ($browser_lang) $_SESSION['language'] = substr($browser_lang, 0, 2);
             else  $_SESSION['language'] = 'en';
         }
-        $path = BASE_DIR . '/loc/' . $_SESSION['language'] . '.php';
-        $default_language = '/loc/en.php';
+        $path = BASE_DIR . '/apps/' . ACTIVE_APP . '/loc/' . $_SESSION['language'] . '.php';
+        $default_language = '/apps/' . ACTIVE_APP . '/loc/en.php';
         $language = parent::language($path, $default_language);
         return $language;
     }
@@ -51,7 +51,7 @@ class Localisation extends BaseLocalisation
     }
     public static function updateUserLanguage($uid, $lang){
         $db = Db::getConnection();
-        $sql = 'UPDATE `user` '.'SET `language` = :language WHERE `id` = :id';
+        $sql = 'UPDATE `users` '.'SET `language` = :language WHERE `id` = :id';
         $result = $db->prepare($sql);
         $result->bindParam(':id', $uid, PDO::PARAM_INT);
         $result->bindParam(':language', $lang, PDO::PARAM_STR);

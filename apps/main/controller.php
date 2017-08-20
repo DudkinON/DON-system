@@ -23,7 +23,8 @@ class MainController extends BaseController
     public function index($args, $settings)
     {
         // if first load redirect to admin panel
-        if (parent::checkConfiguration()) parent::redirectAdmin();
+        if (parent::checkConfiguration()) parent::startConfiguration();
+        render('index');
     }
 
     /**

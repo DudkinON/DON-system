@@ -1,0 +1,101 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="logo-pad">
+                {% if start %}
+                    <div class="text-center">
+                        <a class="nav-link logo-get-started" href="{{ url('admin.don') }}">
+                            <span class="logo-don">DON</span>
+                            <span class="logo-text"> - System</span>
+                        </a>
+                        <div class="lang-container">
+                            <div class="lang-btn pointer" id="language-button">
+                                {{ language['language'] }}
+                            </div>
+                            <div class="lang-selection">
+                                <div class="lang-item">
+                                    <a href="/lang/en">
+                                        <span>{{ language['en'] }}</span>
+                                    </a> |
+                                </div>
+                                <div class="lang-item">
+                                    <a href="/lang/de">
+                                        <span>{{ language['de'] }}</span>
+                                    </a> |
+                                </div>
+                                <div class="lang-item">
+                                    <a href="/lang/ru">
+                                        <span>{{ language['ru'] }}</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% elseif login %}
+                    <div class="header">
+                        <div class="logotype">
+                            <a class="logo" href="{{ url('admin.don') }}">
+                                <span class="logo-don">DON</span>
+                                <span class="logo-text"> - System</span>
+                            </a>
+                        </div>
+                        <div class="language-box">
+                            <div class="lang-btn pointer" id="language-button">
+                                {{ language['language'] }}
+                            </div>
+                            <div class="lang-selection">
+                                <div class="lang-item">
+                                    <a href="/lang/en">
+                                        <span>{{ language['en'] }}</span>
+                                    </a>
+                                </div>
+                                <div class="lang-item">
+                                    <a href="/lang/de">
+                                        <span>{{ language['de'] }}</span>
+                                    </a>
+                                </div>
+                                <div class="lang-item">
+                                    <a href="/lang/ru">
+                                        <span>{{ language['ru'] }}</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="header">
+                        <div class="logotype">
+                            <a class="logo" href="{{ url('admin.don') }}">
+                                <span class="logo-don">DON</span>
+                                <span class="logo-text"> - System</span>
+                            </a>
+                        </div>
+                        <div class="language-box">
+                            <div class="lang-btn pointer" id="language-button">
+                                {{ language['language'] }}
+                            </div>
+                            <div class="lang-selection">
+                                <div class="lang-item">
+                                    <a href="/lang/en">
+                                        <span>{{ language['en'] }}</span>
+                                    </a>
+                                </div>
+                                <div class="lang-item">
+                                    <a href="/lang/de">
+                                        <span>{{ language['de'] }}</span>
+                                    </a>
+                                </div>
+                                <div class="lang-item">
+                                    <a href="/lang/ru">
+                                        <span>{{ language['ru'] }}</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>

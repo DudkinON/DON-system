@@ -26,9 +26,9 @@ class Base
      * redirect to admin panel
      * @return void
      */
-    protected function redirectAdmin()
+    protected function startConfiguration()
     {
-        header("Location: /don");
+        header("Location: /don/start");
         return;
     }
 
@@ -38,7 +38,7 @@ class Base
         foreach ($form as $name => $value)
         {
             $value = preg_replace("/[[:cntrl:]]+/", '', $value);
-            $validForm[] = trim(htmlspecialchars($value));
+            $validForm[$name] = trim(htmlspecialchars($value));
         }
         if ($validForm) return $validForm;
         else return false;

@@ -24,6 +24,7 @@ return array(
     'home' => 'Home',
     'send' => 'send',
     'add' => 'add',
+    'or' => 'or',
     'save' => 'save',
     'but' => 'but',
     'continue' => 'continue',

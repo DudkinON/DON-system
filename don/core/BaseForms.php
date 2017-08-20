@@ -12,5 +12,15 @@ namespace don\core;
 
 class BaseForms
 {
-
+    /**
+     * TODO: check length of string if more return true
+     * @param $str
+     * @param $length
+     * @return bool
+     */
+    public function strMoreLength($str, $length)
+    {
+        if (strlen($str) < $length) return false;
+        else return true;
+    }
 }

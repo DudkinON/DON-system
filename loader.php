@@ -6,12 +6,15 @@
  * Date: 8/3/2017
  * Time: 12:08 PM
  */
-session_start(['csrf_rewrite'=>SESSION_CSRF_POST, 'csrf_validate'=>SESSION_CSRF_POST]);
+session_start();
 
 
 
 // require configuration file
 require (dirname(__FILE__).'/config.php');
+
+// require database configuration file
+if (file_exists(BASE_DIR . '/db.php')) require_once (BASE_DIR . '/db.php');
 
 // require modules
 if(file_exists(DON_DIR.'/modules/composer/vendor/autoload.php')) {
@@ -24,16 +27,6 @@ foreach ($modules as $module) {
     require ($module);
 }
 
-//dump(CORE, true);
 // require autoload
 require (COMPONENTS . '/autoload.php');
 
-//// require base classes
-//require (DON_DIR.'/core/Base.php');
-//require (DON_DIR.'/core/BaseModel.php');
-//require (DON_DIR.'/core/BaseForms.php');
-//require (DON_DIR.'/core/BaseView.php');
-//require (DON_DIR.'/core/BaseController.php');
-//require (DON_DIR.'/core/BaseLocalisation.php');
-//require (DON_DIR.'/core/Kernel.php');
-//require (DON_DIR.'/core/Router.php');

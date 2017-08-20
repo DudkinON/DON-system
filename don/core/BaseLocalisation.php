@@ -23,19 +23,16 @@ class BaseLocalisation implements Language
     {
         $language = array();
         if (isset($_SESSION['language'])) {
-            $path = $get_lang_path;
-            if (file_exists($path)) {
-                $language = include($path);
+            if (file_exists($get_lang_path)) {
+                $language = include($get_lang_path);
             } else {
-                $language = include(BASE_DIR .  $get_default_language);
+                if (file_exists($get_default_language)) $language = include($get_default_language);
+                else exit('file: "'.$get_default_language.'" not found');
             }
         } else {
-            $path = BASE_DIR . '/loc/' . $_SESSION['language'] . '.php';
-            if (file_exists($path)) {
-                $language = include($path);
-            } else {
-                $language = include(BASE_DIR . '/loc/en.php');
-            }
+            $path = APPS_DIR . '/' . ACTIVE_APP . '/loc/en.php';
+            if (file_exists($path)) $language = include($path);
+            else exit('file: "'.$path.'" not found');
         }
         return $language;
     }

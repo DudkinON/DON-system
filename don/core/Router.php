@@ -52,6 +52,7 @@ class Router implements Kernel
     {
         if (preg_match("~/lang/[a-z]+~", $this->uri))
         {
+
             $lang = explode('/', trim($this->uri, '/'))[1];
             Localisation::getLang($lang);
         }
@@ -59,8 +60,8 @@ class Router implements Kernel
             $urls = require(APPS_DIR . '/' . $_app . $this->settings['routes']);
             foreach ($urls as $pattern => $method) {
                 $matches = array();
-
                 if (is_int($pattern) && is_array($method)) {
+
                     if (preg_match((@convert_url($method['route'])), $this->uri, $matches)) {
                         $url = convert_url($method['route']);
                         $this->app = array($_app, array('route' => $url, 'action' => $method['action'], 'name' => $method['name'], 'args' => $matches));
@@ -88,7 +89,7 @@ class Router implements Kernel
         $this->app_controller = BASE_DIR . '/apps/' . $this->app[0] . $this->settings['controller'];
         if (file_exists($this->app_controller)) {
             require($this->app_controller);
-            $controller_name = $this->app[0] . 'Controller';
+            $controller_name = ucfirst($this->app[0]) . 'Controller';
             $this->app_controller = new $controller_name();
         }
     }

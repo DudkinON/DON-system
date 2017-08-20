@@ -20,7 +20,7 @@ class LocalisationAdmin extends BaseLocalisation
             if ($browser_lang) $_SESSION['language'] = substr($browser_lang, 0, 2);
             else  $_SESSION['language'] = 'en';
         }
-        $default_language = '/loc/en.php';
+        $default_language = DON_DIR . '/libs/loc/en.php';
         $path = DON_DIR . '/libs/loc/' . $_SESSION['language'] . '.php';
         $language = parent::language($path, $default_language);
         return $language;
